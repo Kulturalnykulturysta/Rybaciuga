@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рибацюга</title>
+    
+    <style>
+        /* Базові налаштування: темний фон, як на краях зображення */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #1a1a1a; 
+            color: #e0e0e0; /* Світло-сірий текст для контрасту */
+        }
+
+        /* Налаштовуємо шапку: майже чорна з червоною лінією */
+        header {
+            background-color: #111111;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d32f2f; /* Червоний акцент в колір риби */
+        }
+
+        /* Навігація в шапці */
+        header a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #d32f2f; /* Посилання стають червоними при наведенні */
+        }
+
+        /* Контейнер для логотипу та назви */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand div {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px; /* Трохи розсуваємо букви для брутальності */
+        }
+
+        /* Обмежуємо ширину контенту */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto; 
+        }
+
+        /* Стиль заголовків на сторінці */
+        h2 {
+            color: #ffffff;
+            border-left: 4px solid #d32f2f; /* Червона мітка зліва від тексту */
+            padding-left: 10px;
+        }
+
+        /* Сітка для карток */
+        .categories-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; 
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Стиль карток: сірий колір, як тло всередині кола на логотипі */
+        .category-card {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+            flex: 1 1 220px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            border: 2px solid transparent; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(211, 47, 47, 0.15); /* Легке червоне світіння */
+            border-color: #d32f2f; /* З'являється червона рамка */
+            color: #d32f2f; /* Текст стає червоним */
+        }
+        
+        .catalog-container {
+            background-color: #1e1e1e; 
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .catalog-tabs {
+            display: flex;
+            background-color: #111111;
+            border-bottom: 1px solid #333;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            color: #888;
+            font-weight: bold;
+            cursor: pointer;
+            border-top: 3px solid transparent; 
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            color: #fff;
+            background-color: #1a1a1a;
+        }
+
+        /* Активна (вибрана) вкладка */
+        .tab.active {
+            color: #ffffff;
+            background-color: #1e1e1e;
+            border-top: 3px solid #d32f2f; 
+        }
+
+        .catalog-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .menu-group {
+            margin-bottom: 25px;
+        }
+
+        .menu-group h4 {
+            color: #ffffff;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-left: 1px dashed #444; /* Пунктирна лінія зліва, як на скріншоті */
+        }
+
+        .menu-group li {
+            position: relative;
+        }
+
+        .menu-group li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 10px;
+            border-top: 1px dashed #444;
+        }
+
+        .menu-group a {
+            display: block;
+            padding: 5px 0 5px 15px;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .menu-group a:hover {
+            color: #d32f2f;
+        }
+        
+        /* Підвал */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111111;
+            color: #777777;
+            margin-top: 40px;
+            border-top: 1px solid #333333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="07aa1afb87a9851b306613601ee10550~tplv-tiktokx-cropcenter_1080_1080.png" alt="Логотип Рибацюга">
+            <div style="font-size: 24px; font-weight: bold;">РИБАЦЮГА</div>
+        </div>
+        
+        <nav>
+            <a href="#">Каталог</a>
+            <a href="#">Про нас</a>
+            <a href="#">Доставка</a>
+            <a href="#">Кошик (0)</a>
+        </nav>
+    </header>
+
+    <main>
+    <div class="catalog-container">
+        
+        <div class="catalog-tabs">
+            <div class="tab active">Спінінгова ловля</div>
+            <div class="tab">Фідерна ловля</div>
+            <div class="tab">Коропова ловля</div>
+            <div class="tab">Поплавкова ловля</div>
+            <div class="tab">Зимова ловля</div>
+            <div class="tab">Одяг і екіпірування</div>
+            <div class="tab">Спорядження</div>
+        </div>
+
+        <div class="catalog-content">
+            
+            <div class="menu-column">
+                <div class="menu-group">
+                    <h4>Вудилища</h4>
+                    <ul>
+                        <li><a href="#">Кастингові</a></li>
+                        <li><a href="#">Спінінгові</a></li>
+                    </ul>
+                </div>
+                
+                <div class="menu-group">
+                    <h4>Котушки</h4>
+                    <ul>
+                        <li><a href="#">Безінерційні</a></li>
+                        <li><a href="#">Додаткові шпулі</a></li>
+                        <li><a href="#">Мультиплікаторні</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-group">
+                    <h4>Волосінь і шнури</h4>
+                    <ul>
+                        <li><a href="#">Волосінь</a></li>
+                        <li><a href="#">Флюорокарбон</a></li>
+                        <li><a href="#">Шнури</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <div class="menu-group">
+                    <h4>Приманки</h4>
+                    <ul>
+                        <li><a href="#">Блешні</a></li>
+                        <li><a href="#">Воблери</a></li>
+                        <li><a href="#">Мандули</a></li>
+                        <li><a href="#">Силіконові приманки</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-group">
+                    <h4>Гачки</h4>
+                    <ul>
+                        <li><a href="#">Одинарні</a></li>
+                        <li><a href="#">Подвійні (Двійники)</a></li>
+                        <li><a href="#">Потрійні (Трійники)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <div class="menu-group">
+                    <h4>Оснащення</h4>
+                    <ul>
+                        <li><a href="#">Вертлюги й застібки</a></li>
+                        <li><a href="#">Грузила</a></li>
+                        <li><a href="#">Джиг-головки</a></li>
+                        <li><a href="#">Поводки</a></li>
+                    </ul>
+                </div>
+                
+                <div class="menu-group">
+                    <h4>Транспортування</h4>
+                    <ul>
+                        <li><a href="#">Коробки</a></li>
+                        <li><a href="#">Сумки</a></li>
+                        <li><a href="#">Чохли й тубуси</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+</main>
+
+    <footer>
+        <p>© 2026 Магазин для справжніх рибалок. Всі права захищені.</p>
+    </footer>
+
+</body>
+</html>
