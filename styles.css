@@ -1,0 +1,209 @@
+/* 1. Загальні стилі для всіх сторінок */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 1100px;
+  background: #f7f3eb;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 92%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.surface {
+  background: white;
+  border: 1px solid #e8e0d7;
+  border-radius: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid #d32f32;
+  border-radius: 10px;
+  background: #d32f32;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+}
+
+.btn-outline {
+  background: white;
+  color: #d32f32;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 34px;
+}
+
+.page-intro, .lead {
+  color: #716d68;
+  line-height: 1.6;
+}
+
+.breadcrumb {
+  margin: 40px 0 22px;
+  color: #89827c;
+  font-size: 13px;
+}
+
+.breadcrumb span, .eyebrow {
+  color: #d32f32;
+}
+
+/* 2. Верхнє меню — однакове на всіх сторінках */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #d32f32;
+}
+
+.header-inner {
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark img {
+  width: 31px;
+}
+
+.brand strong, .brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 19px;
+}
+
+.brand small {
+  margin-top: 3px;
+  color: #716d68;
+  font-size: 10px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  width: 36%;
+  height: 44px;
+  padding: 4px;
+  border: 1px solid #d32f32;
+  border-radius: 24px;
+  background: #faf8f3;
+}
+
+.header-search input {
+  flex: 1;
+  min-width: 0;
+  padding-left: 16px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 13px;
+}
+
+.search-button {
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 20px;
+  background: #d32f32;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.nav-pill, .nav-icon {
+  padding: 11px 15px;
+  border: 1px solid #d32f32;
+  border-radius: 20px;
+}
+
+.nav-icon {
+  border-radius: 14px;
+  font-weight: bold;
+}
+
+/* 3. Нижнє меню */
+.site-footer {
+  background: #1e1e1e;
+  color: white;
+  border-top: 2px solid #d32f32;
+}
+
+.footer-inner {
+  min-height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-inner strong, .footer-inner small {
+  display: block;
+}
+
+.footer-inner small {
+  margin-top: 5px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 26px;
+  font-size: 12px;
+}
+

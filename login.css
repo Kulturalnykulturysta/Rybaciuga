@@ -1,0 +1,75 @@
+/* 8. Вхід до акаунту */
+.login-main {
+  min-height: 715px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 520px;
+  padding: 30px;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.login-card p {
+  color: #716d68;
+  font-size: 14px;
+}
+
+.login-card form > label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.phone-entry {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-entry span, .phone-entry input, .password-entry input {
+  padding: 12px;
+  border: 1px solid #d32f32;
+  border-radius: 10px;
+  background: #faf8f4;
+}
+
+.phone-entry input {
+  width: 150px;
+}
+
+.password-entry input {
+  width: 100%;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+  font-size: 12px;
+}
+
+.login-options input {
+  accent-color: #d32f32;
+}
+
+.login-options a {
+  color: #d32f32;
+}
+
+.login-card .btn {
+  width: 100%;
+}
+
+.signup-prompt {
+  margin-top: 17px;
+  text-align: center;
+  font-size: 13px;
+}
+

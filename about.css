@@ -1,0 +1,76 @@
+/* 9. Про нас */
+.story-main {
+  max-width: 1160px;
+  padding-bottom: 65px;
+}
+
+.story-hero {
+  max-width: 750px;
+  margin: auto;
+  padding: 52px 0 44px;
+  text-align: center;
+}
+
+.story-hero h1 {
+  margin: 16px 0 10px;
+  font-size: 44px;
+}
+
+.story-hero p, .story-split p, .benefits p, .story-cta p {
+  color: #716d68;
+  line-height: 1.6;
+}
+
+.story-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  margin-bottom: 36px;
+}
+
+.story-split h2, .benefits h2, .story-cta h2 {
+  margin: 0 0 18px;
+  font-size: 29px;
+}
+
+.story-split h3 {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.story-split img {
+  width: 100%;
+  height: 335px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.benefits {
+  margin-bottom: 36px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.benefits-grid article {
+  min-height: 170px;
+  padding: 24px;
+}
+
+.benefits-grid h3 {
+  margin: 0;
+}
+
+.story-cta {
+  padding: 32px;
+  text-align: center;
+}
+
+.story-cta p {
+  max-width: 570px;
+  margin: 0 auto 20px;
+}
+

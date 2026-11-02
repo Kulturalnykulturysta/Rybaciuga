@@ -1,0 +1,161 @@
+/* 7. Особистий кабінет і контакти */
+.interior-main {
+  min-height: 720px;
+  padding-bottom: 55px;
+}
+
+.account-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  margin-top: 38px;
+}
+
+.profile {
+  min-height: 440px;
+  padding: 24px;
+}
+
+.avatar, .empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbe8e5;
+  color: #d32f32;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.profile h2 {
+  margin: 16px 0 5px;
+}
+
+.profile p, .account-note {
+  color: #716d68;
+  font-size: 13px;
+}
+
+.profile-menu a {
+  display: block;
+  padding: 12px;
+}
+
+.profile-menu .active {
+  border-radius: 9px;
+  background: #d32f32;
+  color: white;
+}
+
+.profile-menu .exit {
+  color: #d32f32;
+}
+
+.orders-panel {
+  min-height: 440px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 34px;
+  border-bottom: 1px solid #e8e0d7;
+}
+
+.panel-head h2 {
+  margin: 0;
+}
+
+.tag {
+  color: #9a5b55;
+  font-size: 12px;
+}
+
+.empty-orders {
+  padding: 55px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto;
+  border-radius: 18px;
+  font-size: 30px;
+}
+
+.empty-orders p {
+  max-width: 380px;
+  margin: 0 auto 20px;
+  color: #716d68;
+  line-height: 1.5;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  margin-top: 38px;
+}
+
+.about-card {
+  min-height: 450px;
+  padding: 30px;
+}
+
+.about-card h2 {
+  margin: 0 0 8px;
+}
+
+.about-card .sub, .small-note {
+  color: #716d68;
+  font-size: 13px;
+}
+
+.contact-row {
+  display: flex;
+  gap: 15px;
+  padding: 18px 0;
+  line-height: 1.6;
+}
+
+.contact-glyph {
+  color: #d32f32;
+  font-size: 20px;
+}
+
+.contact-row b {
+  display: block;
+}
+
+.contact-row a {
+  color: #d32f32;
+}
+
+.hours {
+  padding: 15px;
+  border-radius: 9px;
+  background: #fbf8f4;
+  font-size: 13px;
+}
+
+.company-list {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.company-list dt {
+  color: #716d68;
+}
+
+.company-list dd {
+  margin: 0;
+}
+

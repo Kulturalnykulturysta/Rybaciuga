@@ -1,0 +1,187 @@
+/* 6. Сторінка товару */
+.product-main {
+  padding-bottom: 70px;
+}
+
+.product-titleline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.product-titleline h1 {
+  max-width: 860px;
+  margin: 0;
+  font-size: 30px;
+}
+
+.product-titleline small {
+  color: #716d68;
+}
+
+.product-top {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 28px;
+}
+
+.gallery-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 410px;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumbs {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.thumbs a {
+  width: 98px;
+  height: 78px;
+  padding: 8px;
+  text-align: center;
+}
+
+.thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.buy-panel, .details-card, .review-panel {
+  padding: 26px;
+}
+
+.price-label, .delivery-note, .stock {
+  font-size: 13px;
+}
+
+.price {
+  margin: 5px 0 18px;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.buy-panel .btn {
+  display: block;
+}
+
+.stock {
+  color: #44745a;
+}
+
+.delivery-note {
+  margin: 18px 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: #fceeee;
+}
+
+.variant-title {
+  margin: 25px 0 10px;
+  font-weight: bold;
+}
+
+.variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.variants button {
+  padding: 10px;
+  border: 1px solid #e8e0d7;
+  border-radius: 9px;
+  background: white;
+  font-size: 12px;
+}
+
+.variants button:first-child {
+  border-color: #d32f32;
+  color: #d32f32;
+}
+
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 34px;
+}
+
+.details-card h2, .review-panel h2, .viewed h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+.details-card p {
+  line-height: 1.7;
+}
+
+.specs {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.specs td {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.specs td:first-child {
+  width: 55%;
+  color: #716d68;
+}
+
+.review-panel {
+  margin-top: 28px;
+}
+
+.review-tabs {
+  display: flex;
+  gap: 10px;
+  color: #d32f32;
+}
+
+.review-empty {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e8e0d7;
+  color: #716d68;
+}
+
+.viewed {
+  margin-top: 40px;
+}
+
+.viewed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.viewed-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.viewed-card img {
+  width: 95px;
+  height: 85px;
+  object-fit: contain;
+}
+

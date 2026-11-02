@@ -1,0 +1,109 @@
+/* 4. Головна сторінка */
+.home-hero {
+  padding: 65px 0 55px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.home-hero h1 {
+  margin: 22px 0 18px;
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+.home-hero p {
+  margin: 0 auto 28px;
+}
+
+.hero-actions, .method-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.method-nav {
+  margin: 15px 0 48px;
+}
+
+.method-nav a {
+  padding: 10px 18px;
+  border: 1px solid #e8e0d7;
+  border-radius: 22px;
+  background: white;
+  font-size: 12px;
+}
+
+.method-nav a:first-child {
+  background: #d32f32;
+  color: white;
+}
+
+.home-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.home-heading h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.home-heading p {
+  margin: 0;
+  color: #716d68;
+  font-size: 13px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 30px;
+}
+
+.category-card {
+  min-height: 160px;
+  padding: 24px;
+}
+
+.category-card h3 {
+  margin: 0 0 16px;
+  font-size: 21px;
+}
+
+.category-card ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+}
+
+.category-card li::marker {
+  color: #d32f32;
+}
+
+.feature-band {
+  margin: 58px 0 85px;
+  padding: 40px;
+  border-radius: 18px;
+  background: #fbecea;
+  text-align: center;
+}
+
+.feature-band h2 {
+  margin: 0 0 10px;
+  font-size: 29px;
+}
+
+.feature-band p {
+  max-width: 510px;
+  margin: 0 auto 24px;
+  color: #716d68;
+  line-height: 1.6;
+}
+
