@@ -34,72 +34,130 @@
           <a class="btn btn-outline" href="about.html">Допомога у виборі</a>
         </div>
       </section>
-      <nav class="method-nav" aria-label="Способи ловлі">
-        <a href="catalog.html">Спінінгова ловля</a>
-        <a href="catalog.html">Фідерна ловля</a>
-        <a href="catalog.html">Поплавкова ловля</a>
-        <a href="catalog.html">Зимова ловля</a>
-      </nav>
-      <section aria-labelledby="categories-heading">
+      <section class="category-browser" aria-labelledby="categories-heading">
         <div class="home-heading">
           <h2 id="categories-heading">Оберіть категорію</h2>
-          <p>Почніть з методу ловлі або виберіть потрібне спорядження — усі категорії зібрані в одному місці.</p>
+          <p>Наведіть курсор або натисніть на напрямок, щоб швидко перейти до потрібного спорядження.</p>
         </div>
-        <div class="category-grid">
-          <article class="category-card surface">
-            <h3><a href="catalog.html">Вудилища</a></h3>
-            <ul>
-              <li>Кастингові</li>
-              <li>Спінінгові</li>
-            </ul>
-          </article>
-          <article class="category-card surface">
-            <h3><a href="catalog.html">Волосіні й шнури</a></h3>
-            <ul>
-              <li>Волосінь</li>
-              <li>Флюорокарбон</li>
-              <li>Шнури</li>
-            </ul>
-          </article>
-          <article class="category-card surface">
-            <h3><a href="catalog.html">Котушки</a></h3>
-            <ul>
-              <li>Безінерційні</li>
-              <li>Додаткові шпулі</li>
-              <li>Мультиплікаторні</li>
-            </ul>
-          </article>
-          <article class="category-card surface">
-            <h3><a href="catalog.html">Приманки</a></h3>
-            <ul>
-              <li>Блешні</li>
-              <li>Воблери</li>
-              <li>Мандули</li>
-            </ul>
-          </article>
-          <article class="category-card surface">
-            <h3><a href="catalog.html">Оснащення</a></h3>
-            <ul>
-              <li>Вертлюги й застібки</li>
-              <li>Грузила</li>
-              <li>Джиг-головки</li>
-              <li>Поводки</li>
-            </ul>
-          </article>
-          <article class="category-card surface">
-            <h3><a href="catalog.html">Транспортування</a></h3>
-            <ul>
-              <li>Коробки</li>
-              <li>Сумки</li>
-              <li>Чохли й тубуси</li>
-            </ul>
-          </article>
+        <div class="category-menu surface" data-category-menu>
+          <div class="category-tabs" role="tablist" aria-label="Категорії товарів">
+            <button id="category-tab-spinning" type="button" role="tab" aria-controls="category-panel-spinning" aria-selected="true" aria-expanded="false" tabindex="0" data-category-tab="spinning">Спінінгова ловля</button>
+            <button id="category-tab-feeder" type="button" role="tab" aria-controls="category-panel-feeder" aria-selected="false" aria-expanded="false" tabindex="-1" data-category-tab="feeder">Фідерна ловля</button>
+            <button id="category-tab-float" type="button" role="tab" aria-controls="category-panel-float" aria-selected="false" aria-expanded="false" tabindex="-1" data-category-tab="float">Поплавкова ловля</button>
+            <button id="category-tab-winter" type="button" role="tab" aria-controls="category-panel-winter" aria-selected="false" aria-expanded="false" tabindex="-1" data-category-tab="winter">Зимова ловля</button>
+            <button id="category-tab-clothing" type="button" role="tab" aria-controls="category-panel-clothing" aria-selected="false" aria-expanded="false" tabindex="-1" data-category-tab="clothing">Одяг і екіпірування</button>
+          </div>
+
+          <div class="category-panels">
+            <div id="category-panel-spinning" class="category-panel is-active" role="tabpanel" aria-labelledby="category-tab-spinning" aria-hidden="true" inert data-category-panel="spinning">
+              <div class="category-columns">
+                <div class="category-column">
+                  <div class="category-group"><h3>Вудилища</h3><a href="catalog.html?category=Кастингові">Кастингові</a><a href="catalog.html?category=Спінінгові">Спінінгові</a></div>
+                  <div class="category-group"><h3>Котушки</h3><a href="catalog.html?category=Безінерційні">Безінерційні</a><a href="catalog.html?category=Додаткові+шпулі">Додаткові шпулі</a><a href="catalog.html?category=Мультиплікаторні">Мультиплікаторні</a></div>
+                  <div class="category-group"><h3>Волосінь і шнури</h3><a href="catalog.html?category=Волосінь">Волосінь</a><a href="catalog.html?category=Флюорокарбон">Флюорокарбон</a><a href="catalog.html?category=Шнури">Шнури</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Приманки</h3><a href="catalog.html?category=Блешні">Блешні</a><a href="catalog.html?category=Воблери">Воблери</a><a href="catalog.html?category=Мандули">Мандули</a><a href="catalog.html?category=Пількери">Пількери</a><a href="catalog.html?category=Силіконові+приманки">Силіконові приманки</a><a href="catalog.html?category=Тейл-спінери+й+цикади">Тейл-спінери й цикади</a></div>
+                  <div class="category-group"><h3>Гачки</h3><a href="catalog.html?category=Одинарні+гачки">Одинарні</a><a href="catalog.html?category=Подвійні+гачки">Подвійні</a><a href="catalog.html?category=Потрійні+гачки">Потрійні</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Оснащення</h3><a href="catalog.html?category=Вертлюги+й+застібки">Вертлюги й застібки</a><a href="catalog.html?category=Грузила">Грузила</a><a href="catalog.html?category=Джиг-головки">Джиг-головки</a><a href="catalog.html?category=Поводки">Поводки</a></div>
+                  <div class="category-group"><h3>Транспортування і зберігання</h3><a href="catalog.html?category=Коробки">Коробки</a><a href="catalog.html?category=Сумки">Сумки</a><a href="catalog.html?category=Чохли+й+тубуси">Чохли й тубуси</a><a href="catalog.html?category=Ящики">Ящики</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Аксесуари</h3><a href="catalog.html?category=Багорики+й+кукани">Багорики й кукани</a><a href="catalog.html?category=Ваги">Ваги</a><a href="catalog.html?category=Ехолоти">Ехолоти</a><a href="catalog.html?category=Інструменти">Інструменти</a><a href="catalog.html?category=Підводні+камери">Підводні камери</a><a href="catalog.html?category=Підсаки">Підсаки</a></div>
+                  <div class="category-group"><h3>Надувні човни й мотори</h3><a href="catalog.html?category=Надувні+човни">Надувні човни</a></div>
+                </div>
+              </div>
+              <a class="category-all" href="catalog.html?category=Спінінгова+ловля">Усі товари для спінінгової ловлі →</a>
+            </div>
+
+            <div id="category-panel-feeder" class="category-panel" role="tabpanel" aria-labelledby="category-tab-feeder" aria-hidden="true" inert data-category-panel="feeder">
+              <div class="category-columns">
+                <div class="category-column">
+                  <div class="category-group"><h3>Вудилища</h3><a href="catalog.html?category=Фідерні">Фідерні</a></div>
+                  <div class="category-group"><h3>Котушки</h3><a href="catalog.html?category=Безінерційні">Безінерційні</a><a href="catalog.html?category=Додаткові+шпулі">Додаткові шпулі</a></div>
+                  <div class="category-group"><h3>Волосінь і шнури</h3><a href="catalog.html?category=Волосінь">Волосінь</a><a href="catalog.html?category=Повідковий+матеріал">Повідковий матеріал</a><a href="catalog.html?category=Флюорокарбон">Флюорокарбон</a><a href="catalog.html?category=Шнури">Шнури</a></div>
+                  <div class="category-group"><h3>Гачки</h3><a href="catalog.html?category=Одинарні+гачки">Одинарні</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Оснащення</h3><a href="catalog.html?category=Амортизуюча+гума">Амортизуюча гума</a><a href="catalog.html?category=Вертлюги+й+застібки">Вертлюги й застібки</a><a href="catalog.html?category=Годівниці">Годівниці</a><a href="catalog.html?category=Грузила">Грузила</a><a href="catalog.html?category=Елементи+оснащення">Елементи оснащення</a><a href="catalog.html?category=Монтажі">Монтажі</a><a href="catalog.html?category=ПВА+матеріали">ПВА матеріали</a></div>
+                  <div class="category-group"><h3>Прикормка і насадки</h3><a href="catalog.html?category=Атрактанти+й+ліквіди">Атрактанти й ліквіди</a><a href="catalog.html?category=Діпи">Діпи</a><a href="catalog.html?category=Зернові+суміші">Зернові суміші</a><a href="catalog.html?category=Насадки">Насадки</a><a href="catalog.html?category=Прикормка">Прикормка</a><a href="catalog.html?category=Спреї">Спреї</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Транспортування і зберігання</h3><a href="catalog.html?category=Відра+і+ємності">Відра і ємності</a><a href="catalog.html?category=Коробки">Коробки</a><a href="catalog.html?category=Поводочниці+та+мотовила">Поводочниці та мотовила</a><a href="catalog.html?category=Сумки">Сумки</a><a href="catalog.html?category=Чохли+й+тубуси">Чохли й тубуси</a><a href="catalog.html?category=Ящики">Ящики</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Аксесуари</h3><a href="catalog.html?category=Ваги">Ваги</a><a href="catalog.html?category=Ехолоти">Ехолоти</a><a href="catalog.html?category=Інструменти">Інструменти</a><a href="catalog.html?category=Підводні+камери">Підводні камери</a><a href="catalog.html?category=Підсаки">Підсаки</a><a href="catalog.html?category=Род-поди+й+підставки">Род-поди, стійки й підставки</a><a href="catalog.html?category=Садки">Садки</a></div>
+                </div>
+              </div>
+              <a class="category-all" href="catalog.html?category=Фідерна+ловля">Усі товари для фідерної ловлі →</a>
+            </div>
+
+            <div id="category-panel-float" class="category-panel" role="tabpanel" aria-labelledby="category-tab-float" aria-hidden="true" inert data-category-panel="float">
+              <div class="category-columns">
+                <div class="category-column">
+                  <div class="category-group"><h3>Вудилища</h3><a href="catalog.html?category=Болонські">Болонські</a><a href="catalog.html?category=Матчові">Матчові</a><a href="catalog.html?category=Махові">Махові</a></div>
+                  <div class="category-group"><h3>Котушки</h3><a href="catalog.html?category=Безінерційні">Безінерційні</a><a href="catalog.html?category=Інерційні">Інерційні</a></div>
+                  <div class="category-group"><h3>Волосінь і шнури</h3><a href="catalog.html?category=Волосінь">Волосінь</a><a href="catalog.html?category=Флюорокарбон">Флюорокарбон</a></div>
+                  <div class="category-group"><h3>Поплавки й сигналізатори</h3><a href="catalog.html?category=Поплавки">Поплавки</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Гачки</h3><a href="catalog.html?category=Літні+мормишки">Літні мормишки</a><a href="catalog.html?category=Одинарні+гачки">Одинарні</a></div>
+                  <div class="category-group"><h3>Оснащення</h3><a href="catalog.html?category=Вертлюги+й+застібки">Вертлюги й застібки</a><a href="catalog.html?category=Грузила">Грузила</a><a href="catalog.html?category=Елементи+оснащення">Елементи оснащення</a><a href="catalog.html?category=Конектори+для+вудилищ">Конектори для вудилищ</a></div>
+                  <div class="category-group"><h3>Прикормка і насадки</h3><a href="catalog.html?category=Атрактанти+й+ліквіди">Атрактанти й ліквіди</a><a href="catalog.html?category=Діпи">Діпи</a><a href="catalog.html?category=Зернові+суміші">Зернові суміші</a><a href="catalog.html?category=Насадки">Насадки</a><a href="catalog.html?category=Прикормка">Прикормка</a><a href="catalog.html?category=Спреї">Спреї</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Транспортування і зберігання</h3><a href="catalog.html?category=Відра+і+ємності">Відра і ємності</a><a href="catalog.html?category=Коробки">Коробки</a><a href="catalog.html?category=Поводочниці+та+мотовила">Поводочниці та мотовила</a><a href="catalog.html?category=Сумки">Сумки</a><a href="catalog.html?category=Чохли+й+тубуси">Чохли й тубуси</a><a href="catalog.html?category=Ящики">Ящики</a></div>
+                </div>
+                <div class="category-column">
+                  <div class="category-group"><h3>Аксесуари</h3><a href="catalog.html?category=Ваги">Ваги</a><a href="catalog.html?category=Ехолоти">Ехолоти</a><a href="catalog.html?category=Інструменти">Інструменти</a><a href="catalog.html?category=Підводні+камери">Підводні камери</a><a href="catalog.html?category=Підсаки">Підсаки</a><a href="catalog.html?category=Садки">Садки</a><a href="catalog.html?category=Світлячки">Світлячки</a></div>
+                  <div class="category-group"><h3>Надувні човни й мотори</h3><a href="catalog.html?category=Надувні+човни">Надувні човни</a></div>
+                </div>
+              </div>
+              <a class="category-all" href="catalog.html?category=Поплавкова+ловля">Усі товари для поплавкової ловлі →</a>
+            </div>
+
+            <div id="category-panel-winter" class="category-panel" role="tabpanel" aria-labelledby="category-tab-winter" aria-hidden="true" inert data-category-panel="winter">
+              <div class="category-columns category-columns-list">
+                <div class="category-column"><div class="category-group"><h3>Для зимової риболовлі</h3><a href="catalog.html?category=Зимова+прикормка">Зимова прикормка</a><a href="catalog.html?category=Зимові+вудки">Зимові вудки</a><a href="catalog.html?category=Зимова+волосінь">Зимова волосінь</a><a href="catalog.html?category=Балансири+й+бокоплави">Балансири й бокоплави</a><a href="catalog.html?category=Зимові+блешні">Зимові блешні</a><a href="catalog.html?category=Мормишки">Мормишки</a></div></div>
+                <div class="category-column"><div class="category-group"><h3>Оснащення</h3><a href="catalog.html?category=Зимові+кивки+й+поплавки">Зимові кивки й поплавки</a><a href="catalog.html?category=Гачки+й+трійники+з+краплями">Гачки й трійники з краплями</a><a href="catalog.html?category=Зимові+аксесуари">Зимові аксесуари</a><a href="catalog.html?category=Зимові+ящики+коробки+й+чохли">Зимові ящики, коробки й чохли</a><a href="catalog.html?category=Льодобури">Льодобури</a><a href="catalog.html?category=Сани+рибальські">Сани рибальські</a></div></div>
+                <div class="category-column"><div class="category-group"><h3>Тепло й комфорт</h3><a href="catalog.html?category=Зимові+намети">Зимові намети</a><a href="catalog.html?category=Костюми">Костюми</a><a href="catalog.html?category=Рукавички+й+рукавиці">Рукавички й рукавиці</a><a href="catalog.html?category=Шкарпетки">Шкарпетки</a><a href="catalog.html?category=Чоботи+й+черевики">Чоботи й черевики</a></div></div>
+              </div>
+              <a class="category-all" href="catalog.html?category=Зимова+ловля">Усі товари для зимової ловлі →</a>
+            </div>
+
+            <div id="category-panel-clothing" class="category-panel" role="tabpanel" aria-labelledby="category-tab-clothing" aria-hidden="true" inert data-category-panel="clothing">
+              <div class="category-columns category-columns-clothing">
+                <div class="category-column"><div class="category-group"><h3>Одяг</h3><a href="catalog.html?category=Блузи+й+сорочки">Блузи й сорочки</a><a href="catalog.html?category=Забродне+екіпірування">Забродне екіпірування</a><a href="catalog.html?category=Костюми">Костюми</a><a href="catalog.html?category=Кофти+реглани+й+пуловери">Кофти, реглани й пуловери</a><a href="catalog.html?category=Куртки">Куртки</a><a href="catalog.html?category=Рукавички+й+рукавиці">Рукавички й рукавиці</a></div></div>
+                <div class="category-column"><div class="category-group"><h3>Базові шари</h3><a href="catalog.html?category=Термобілизна">Термобілизна</a><a href="catalog.html?category=Флісовий+одяг">Флісовий одяг</a><a href="catalog.html?category=Футболки">Футболки</a><a href="catalog.html?category=Шкарпетки">Шкарпетки</a><a href="catalog.html?category=Штани+й+шорти">Штани й шорти</a></div></div>
+                <div class="category-column"><div class="category-group"><h3>Взуття</h3><a href="catalog.html?category=Кросівки">Кросівки</a><a href="catalog.html?category=Чоботи+й+черевики">Чоботи й черевики</a></div><div class="category-group"><h3>Головні убори й окуляри</h3><a href="catalog.html?category=Бафи">Бафи</a><a href="catalog.html?category=Кепки">Кепки</a><a href="catalog.html?category=Окуляри">Окуляри</a><a href="catalog.html?category=Панами+й+капелюхи">Панами й капелюхи</a><a href="catalog.html?category=Шапки+й+балаклави">Шапки й балаклави</a></div></div>
+              </div>
+              <a class="category-all" href="catalog.html?category=Одяг+і+екіпірування">Увесь одяг та екіпірування →</a>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="feature-band" aria-labelledby="feature-heading">
-        <h2 id="feature-heading">Силіконові приманки</h2>
-        <p>Популярна категорія для тих, хто хоче швидко знайти потрібну приманку для наступної риболовлі.</p>
-        <a class="btn" href="catalog.html">Переглянути категорію</a>
+
+      <section class="seasonal-section" aria-labelledby="seasonal-heading">
+        <div class="seasonal-heading">
+          <div><span class="seasonal-kicker">Пізня осінь · зимовий сезон</span><h2 id="seasonal-heading">Рекомендації сезону</h2></div>
+          <p>Добірка для холодної води, коротких днів і підготовки до першого льоду.</p>
+        </div>
+        <div class="seasonal-grid">
+          <article class="seasonal-card surface">
+            <a class="seasonal-image" href="product.html"><span>Для хижака</span><img src="assets/rod.png" width="367" height="289" loading="lazy" decoding="async" alt="Кастингове вудилище Favorite Totem 130 Series"></a>
+            <div class="seasonal-copy"><p>Вудилища для важких приманок</p><h3><a href="product.html">Favorite Totem 130 Series</a></h3><div><strong>5 360 грн</strong><a class="btn" href="cart.html" data-add-to-cart data-product-id="favorite-totem-130" data-sku="1501004002" data-name="Кастингове вудилище Favorite Totem 130 Series" data-variant="1,98 м · 20–80 г" data-price-value="5360" data-image="assets/rod.png">Додати</a></div></div>
+          </article>
+          <article class="seasonal-card surface">
+            <a class="seasonal-image" href="catalog.html?category=Безінерційні"><span>Універсальний вибір</span><img src="assets/viewed-reel.png" width="143" height="138" loading="lazy" decoding="async" alt="Котушка Select Ritmix 2500S"></a>
+            <div class="seasonal-copy"><p>Для тонких осінніх проводок</p><h3><a href="catalog.html?category=Безінерційні">Select Ritmix 2500S</a></h3><div><strong>800 грн</strong><a class="btn" href="cart.html" data-add-to-cart data-product-id="ritmix-2500s" data-sku="RITMIX-2500S" data-name="Котушка Select Ritmix 2500S" data-variant="2500S" data-price-value="800" data-image="assets/viewed-reel.png">Додати</a></div></div>
+          </article>
+          <article class="seasonal-card surface">
+            <a class="seasonal-image" href="catalog.html?category=Безінерційні"><span>Для дальнього закидання</span><img src="assets/viewed-reel.png" width="143" height="138" loading="lazy" decoding="async" alt="Котушка Select Ritmix 4000"></a>
+            <div class="seasonal-copy"><p>Для фідера й важчих оснасток</p><h3><a href="catalog.html?category=Безінерційні">Select Ritmix 4000</a></h3><div><strong>1 150 грн</strong><a class="btn" href="cart.html" data-add-to-cart data-product-id="ritmix-4000" data-sku="RITMIX-4000" data-name="Котушка Select Ritmix 4000" data-variant="4000" data-price-value="1150" data-image="assets/viewed-reel.png">Додати</a></div></div>
+          </article>
+        </div>
       </section>
     </main>
     <footer class="site-footer">
@@ -114,5 +172,6 @@
       </div>
     </footer>
     <script src="cart.js"></script>
+    <script src="home.js"></script>
   </body>
 </html>
