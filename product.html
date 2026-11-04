@@ -6,11 +6,12 @@
     <title>Favorite Totem 130 Series — Риболов</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="cart.css">
   </head>
   <body class="product-page">
     <header class="site-header">
       <div class="container header-inner">
-        <a href="index.html" class="brand" aria-label="Рибацюга — головна"><span class="brand-mark"><img src="assets/logo.png" alt=""></span><span><strong>Рибацюга</strong><small>Каталог виробів для рибалок</small></span></a>
+        <a href="index.html" class="brand" aria-label="Рибацюга — головна"><span class="brand-mark"><img src="assets/logo-120.png" width="120" height="120" alt=""></span><span><strong>Рибацюга</strong><small>Каталог виробів для рибалок</small></span></a>
         <form class="header-search" action="catalog.html">
           <input name="q" type="search" placeholder="Пошук товару..." aria-label="Пошук товару">
           <button class="search-button" type="submit">Пошук</button>
@@ -26,22 +27,33 @@
     <main class="container product-main">
       <div class="breadcrumb"><a href="index.html">Головна</a> / <a href="catalog.html">Вудилища</a> / Кастингові</div>
       <div class="product-titleline">
-        <h1>Кастингове вудилище Favorite Totem 130 Series TTM1C-662-80 1,98 м 20–80 г</h1>
+        <h1>Кастингове вудилище Favorite Totem 130 Series TTM1C-662-80 <span class="product-variant-name">1,98 м 20–80 г</span></h1>
         <small>Артикул: 1501004002</small>
       </div>
       <div class="product-top">
         <div>
-          <div class="gallery-main surface"><img src="assets/rod.png" alt="Кастингове вудилище Favorite Totem 130 Series"></div>
-          <div class="thumbs"><a class="surface" href="assets/rod.png" aria-label="Вудилище"><img src="assets/rod.png" alt=""></a><a class="surface" href="assets/guide.png" aria-label="Кільце вудилища"><img src="assets/guide.png" alt=""></a><a class="surface" href="assets/handle.png" aria-label="Рукоятка"><img src="assets/handle.png" alt=""></a></div>
+          <div class="gallery-main surface"><img src="assets/rod.png" width="367" height="289" decoding="async" alt="Кастингове вудилище Favorite Totem 130 Series"></div>
+          <div class="thumbs" aria-label="Фотографії товару">
+            <button class="surface is-selected" type="button" data-photo="assets/rod.png" aria-label="Вудилище" aria-pressed="true"><img src="assets/rod.png" width="367" height="289" alt=""></button>
+            <button class="surface" type="button" data-photo="assets/guide.png" aria-label="Кільце вудилища" aria-pressed="false"><img src="assets/guide.png" width="74" height="48" alt=""></button>
+            <button class="surface" type="button" data-photo="assets/handle.png" aria-label="Рукоятка" aria-pressed="false"><img src="assets/handle.png" width="72" height="48" alt=""></button>
+          </div>
         </div>
         <section class="buy-panel surface">
           <div class="price-label">Ціна</div>
           <div class="price">5 360 грн</div>
-          <a href="cart.html" class="btn">Купити</a>
+          <a href="cart.html" class="btn" data-add-to-cart data-product-id="favorite-totem-130" data-sku="1501004002" data-name="Кастингове вудилище Favorite Totem 130 Series" data-variant="1,98 м · 20–80 г" data-price-value="5360" data-image="assets/rod.png">Купити</a>
           <p class="stock">✓ В наявності</p>
           <div class="delivery-note">До безкоштовної доставки залишилось 1 211 грн<br><a href="contacts.html">Доставка та оплата →</a></div>
           <div class="variant-title">Модифікація</div>
-          <div class="variants"><button type="button">1,98 м · 20–80 г</button><button type="button">1,98 м · 40–130 г</button><button type="button">2,44 м · 20–60 г</button><button type="button">2,49 м · 60–120 г</button><button type="button">2,54 м · 20–80 г</button></div>
+          <div class="variants" aria-label="Вибір модифікації">
+            <button class="is-selected" type="button" data-price="5 360 грн" data-price-value="5360" data-sku="1501004002" data-length="1,98 м" data-test="20–80 г" aria-pressed="true">1,98 м · 20–80 г</button>
+            <button type="button" data-price="5 580 грн" data-price-value="5580" data-sku="1501004003" data-length="1,98 м" data-test="40–130 г" aria-pressed="false">1,98 м · 40–130 г</button>
+            <button type="button" data-price="5 490 грн" data-price-value="5490" data-sku="1501004004" data-length="2,44 м" data-test="20–60 г" aria-pressed="false">2,44 м · 20–60 г</button>
+            <button type="button" data-price="5 980 грн" data-price-value="5980" data-sku="1501004005" data-length="2,49 м" data-test="60–120 г" aria-pressed="false">2,49 м · 60–120 г</button>
+            <button type="button" data-price="5 740 грн" data-price-value="5740" data-sku="1501004006" data-length="2,54 м" data-test="20–80 г" aria-pressed="false">2,54 м · 20–80 г</button>
+          </div>
+          <div class="selected-variant" aria-live="polite">Обрано: 1,98 м · 20–80 г</div>
         </section>
       </div>
       <div class="product-details">
@@ -76,9 +88,17 @@
       </section>
       <section class="viewed">
         <h2>Переглянуті товари</h2>
-        <div class="viewed-grid"><a href="product.html" class="viewed-card surface"><img src="assets/rod.png" alt=""><strong>Кастингове вудилище Favorite Totem 130 Series</strong></a><a href="catalog.html" class="viewed-card surface"><img src="assets/viewed-reel.png" alt=""><strong>Котушка Select Ritmix 2000 · 800 грн</strong></a><a href="catalog.html" class="viewed-card surface"><img src="assets/guide.png" alt=""><strong>Фідерне вудилище Zodiac</strong></a></div>
+        <div class="viewed-grid"><a href="product.html" class="viewed-card surface"><img src="assets/rod.png" width="367" height="289" loading="lazy" decoding="async" alt=""><strong>Кастингове вудилище Favorite Totem 130 Series</strong></a><a href="catalog.html" class="viewed-card surface"><img src="assets/viewed-reel.png" width="143" height="138" loading="lazy" decoding="async" alt=""><strong>Котушка Select Ritmix 2000 · 800 грн</strong></a><a href="catalog.html" class="viewed-card surface"><img src="assets/guide.png" width="74" height="48" loading="lazy" decoding="async" alt=""><strong>Фідерне вудилище Zodiac</strong></a></div>
       </section>
     </main>
+    <div class="photo-modal" hidden>
+      <button class="photo-modal-backdrop" type="button" tabindex="-1" aria-label="Закрити перегляд фото"></button>
+      <section class="photo-modal-window" role="dialog" aria-modal="true" aria-labelledby="photo-modal-title">
+        <button class="photo-modal-close" type="button" aria-label="Закрити">×</button>
+        <img src="assets/rod.png" alt="">
+        <p id="photo-modal-title">Вудилище</p>
+      </section>
+    </div>
     <footer class="site-footer">
       <div class="container footer-inner">
         <div><strong>Риболов</strong><small>Каталог виробів для рибалок · 2026</small></div>
@@ -90,5 +110,7 @@
         </nav>
       </div>
     </footer>
+    <script src="cart.js"></script>
+    <script src="product.js"></script>
   </body>
 </html>

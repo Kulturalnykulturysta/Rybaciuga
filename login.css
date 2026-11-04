@@ -73,3 +73,31 @@
   font-size: 13px;
 }
 
+@media (max-width: 768px) {
+  .login-main {
+    min-height: auto;
+    padding: 55px 0;
+  }
+
+  .login-card {
+    width: min(520px, 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 22px;
+  }
+
+  .phone-entry input {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .login-options {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+

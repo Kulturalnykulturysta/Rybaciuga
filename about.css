@@ -74,3 +74,43 @@
   margin: 0 auto 20px;
 }
 
+@media (max-width: 768px) {
+  .story-hero {
+    padding: 42px 0 34px;
+  }
+
+  .story-hero h1 {
+    font-size: 36px;
+  }
+
+  .story-split,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-split img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-hero h1 {
+    font-size: 31px;
+  }
+
+  .story-split h2,
+  .benefits h2,
+  .story-cta h2 {
+    font-size: 25px;
+  }
+
+  .story-split img {
+    height: 220px;
+  }
+
+  .benefits-grid article,
+  .story-cta {
+    padding: 22px;
+  }
+}
+

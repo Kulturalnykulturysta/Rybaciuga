@@ -159,3 +159,49 @@
   margin: 0;
 }
 
+@media (max-width: 1024px) {
+  .account-layout {
+    grid-template-columns: 230px 1fr;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .interior-main {
+    min-height: auto;
+  }
+
+  .account-layout,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile,
+  .orders-panel,
+  .about-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px;
+  }
+
+  .about-card {
+    padding: 22px;
+  }
+
+  .company-list {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .company-list dd {
+    margin-bottom: 12px;
+  }
+}
+
