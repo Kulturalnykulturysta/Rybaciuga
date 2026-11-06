@@ -5,6 +5,7 @@ const productSku = document.querySelector('.product-titleline small');
 const selectedVariant = document.querySelector('.selected-variant');
 const buyButton = document.querySelector('[data-add-to-cart]');
 const specRows = Array.from(document.querySelectorAll('.specs tr'));
+const variantSpec = document.querySelector('[data-variant-spec]');
 
 function findSpecValue(label) {
   const row = specRows.find((item) => item.firstElementChild?.textContent.trim() === label);
@@ -16,19 +17,38 @@ const testSpec = findSpecValue('Тест');
 
 variantButtons.forEach((button) => {
   button.addEventListener('click', () => {
+    const buttonLabel = button.textContent.trim();
+    const titleSuffix = button.dataset.title
+      || [button.dataset.length, button.dataset.test].filter(Boolean).join(' ')
+      || buttonLabel;
+
     variantButtons.forEach((item) => {
       const isCurrent = item === button;
       item.classList.toggle('is-selected', isCurrent);
       item.setAttribute('aria-pressed', String(isCurrent));
     });
 
-    productPrice.textContent = button.dataset.price;
-    productSku.textContent = `Артикул: ${button.dataset.sku}`;
-    productVariantName.textContent = `${button.dataset.length} ${button.dataset.test}`;
-    selectedVariant.textContent = `Обрано: ${button.textContent.trim()}`;
-    buyButton.dataset.sku = button.dataset.sku;
-    buyButton.dataset.variant = button.textContent.trim();
-    buyButton.dataset.priceValue = button.dataset.priceValue;
+    if (productPrice && button.dataset.price) {
+      productPrice.textContent = button.dataset.price;
+    }
+
+    if (productSku && button.dataset.sku) {
+      productSku.textContent = `Артикул: ${button.dataset.sku}`;
+    }
+
+    if (productVariantName) {
+      productVariantName.textContent = titleSuffix;
+    }
+
+    if (selectedVariant) {
+      selectedVariant.textContent = `Обрано: ${buttonLabel}`;
+    }
+
+    if (buyButton) {
+      buyButton.dataset.sku = button.dataset.sku || buyButton.dataset.sku;
+      buyButton.dataset.variant = buttonLabel;
+      buyButton.dataset.priceValue = button.dataset.priceValue || buyButton.dataset.priceValue;
+    }
 
     if (lengthSpec) {
       lengthSpec.textContent = button.dataset.length;
@@ -36,6 +56,10 @@ variantButtons.forEach((button) => {
 
     if (testSpec) {
       testSpec.textContent = button.dataset.test;
+    }
+
+    if (variantSpec && button.dataset.specValue) {
+      variantSpec.textContent = button.dataset.specValue;
     }
   });
 });

@@ -1,3 +1,70 @@
+const filterForm = document.querySelector('.filter-row');
+const searchInput = filterForm.querySelector('input[name="q"]');
+const priceSelect = filterForm.querySelector('select[name="price"]');
+const categorySelect = filterForm.querySelector('select[name="category"]');
+const productCards = Array.from(document.querySelectorAll('[data-product-card]'));
+const emptyState = document.querySelector('[data-catalog-empty]');
+const urlFilters = new URLSearchParams(window.location.search);
+
+function normalizeText(value) {
+  return String(value || '').trim().toLocaleLowerCase('uk-UA');
+}
+
+function matchesPrice(price, range) {
+  if (range === '0-500') return price <= 500;
+  if (range === '500-1500') return price > 500 && price <= 1500;
+  if (range === '1500-3000') return price > 1500 && price <= 3000;
+  if (range === '3000-plus') return price > 3000;
+  return true;
+}
+
+function applyInitialFilters() {
+  const requestedQuery = urlFilters.get('q');
+  const requestedCategory = urlFilters.get('category');
+  const requestedPrice = urlFilters.get('price');
+
+  if (requestedQuery) {
+    searchInput.value = requestedQuery;
+  }
+
+  if (requestedCategory) {
+    const matchingOption = Array.from(categorySelect.options).find((option) => (
+      normalizeText(option.value) === normalizeText(requestedCategory)
+    ));
+
+    if (matchingOption) {
+      categorySelect.value = matchingOption.value;
+    } else {
+      categorySelect.add(new Option(`Категорія: ${requestedCategory}`, requestedCategory, false, true));
+    }
+  }
+
+  if (requestedPrice && Array.from(priceSelect.options).some((option) => option.value === requestedPrice)) {
+    priceSelect.value = requestedPrice;
+  }
+}
+
+function filterProducts() {
+  const query = normalizeText(searchInput.value);
+  const category = normalizeText(categorySelect.value);
+  const priceRange = priceSelect.value;
+  let visibleCount = 0;
+
+  productCards.forEach((card) => {
+    const matchesQuery = !query || normalizeText(card.dataset.name).includes(query);
+    const matchesCategory = category === 'all' || normalizeText(card.dataset.category).includes(category);
+    const price = Number(card.dataset.price);
+    const shouldShow = matchesQuery && matchesCategory && matchesPrice(price, priceRange);
+
+    card.hidden = !shouldShow;
+    if (shouldShow) visibleCount += 1;
+  });
+
+  emptyState.hidden = visibleCount > 0;
+}
+
+applyInitialFilters();
+
 const filterSelects = document.querySelectorAll('.filter-row select');
 const enhancedSelects = [];
 
@@ -132,7 +199,13 @@ document.addEventListener('click', (event) => {
   }
 });
 
-const filterForm = document.querySelector('.filter-row');
+filterForm.addEventListener('input', filterProducts);
+filterForm.addEventListener('change', filterProducts);
+
+filterForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  filterProducts();
+});
 
 filterForm.addEventListener('reset', () => {
   window.setTimeout(() => {
@@ -140,5 +213,8 @@ filterForm.addEventListener('reset', () => {
       updateSelection();
       closeFilterSelect(customSelect);
     });
+    filterProducts();
   }, 0);
 });
+
+filterProducts();

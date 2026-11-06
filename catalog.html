@@ -32,59 +32,40 @@
         <p class="filter-help">Налаштуйте пошук за назвою, ціною та категорією.</p>
         <form class="filter-row" action="catalog.html">
           <input name="q" placeholder="Назва товару" aria-label="Назва товару">
-          <select name="price" aria-label="Ціна"><option>Ціна: 0–2 500 грн</option><option>До 1 000 грн</option><option>1 000–2 500 грн</option></select>
-          <select name="category" aria-label="Категорія"><option>Категорія: Котушки</option><option>Вудилища</option><option>Приманки</option></select>
+          <select name="price" aria-label="Ціна"><option value="all">Усі ціни</option><option value="0-500">До 500 грн</option><option value="500-1500">500–1 500 грн</option><option value="1500-3000">1 500–3 000 грн</option><option value="3000-plus">Понад 3 000 грн</option></select>
+          <select name="category" aria-label="Категорія"><option value="all">Усі категорії</option><option value="Котушки">Котушки</option><option value="Вудилища">Вудилища</option><option value="Приманки">Приманки</option><option value="Аксесуари">Аксесуари</option></select>
           <button class="btn btn-outline" type="reset">Скинути</button>
         </form>
-        <div class="product-grid">
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" decoding="async" alt="Котушка Select Ritmix 2500S"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 2500S</a></h3>
-            <p>6+1 підшипників · 2500S · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>800 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-2500s" data-sku="RITMIX-2500S" data-name="Котушка Select Ritmix 2500S" data-variant="2500S" data-price-value="800" data-image="assets/viewed-reel.png">Додати</a></div>
+        <div class="product-grid" aria-live="polite">
+          <article class="product-card surface" data-product-card data-name="Котушка Select Ritmix 2500S" data-category="Котушки Безінерційні" data-price="1080">
+            <a class="product-card-image" href="product-reel.html"><img src="assets/select-ritmix-2500s-front.webp" width="1024" height="768" decoding="async" alt="Котушка Select Ritmix 2500S"></a>
+            <span class="product-card-category">Котушки</span>
+            <h3><a href="product-reel.html">Котушка Select Ritmix 2500S</a></h3>
+            <p>6+1 підшипників · передній фрикціон · універсальна спінінгова модель</p>
+            <div class="card-bottom"><strong>1 080 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="select-ritmix" data-sku="2102250005" data-name="Котушка Select Ritmix" data-variant="2500S" data-price-value="1080" data-image="assets/select-ritmix-2500s-front.webp">Додати</a></div>
           </article>
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" decoding="async" alt="Котушка Select Ritmix 3000"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 3000</a></h3>
-            <p>6+1 підшипників · 3000 · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>950 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-3000" data-sku="RITMIX-3000" data-name="Котушка Select Ritmix 3000" data-variant="3000" data-price-value="950" data-image="assets/viewed-reel.png">Додати</a></div>
+          <article class="product-card surface" data-product-card data-name="Кастингове вудилище Favorite Totem 130 Series" data-category="Вудилища Кастингові Спінінгова ловля" data-price="5360">
+            <a class="product-card-image" href="product.html"><img src="assets/rod.png" width="367" height="289" decoding="async" alt="Кастингове вудилище Favorite Totem 130 Series"></a>
+            <span class="product-card-category">Вудилища</span>
+            <h3><a href="product.html">Favorite Totem 130 Series</a></h3>
+            <p>1,98 м · тест 20–80 г · швидкий стрій · карбоновий бланк</p>
+            <div class="card-bottom"><strong>5 360 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="favorite-totem-130" data-sku="1501004002" data-name="Кастингове вудилище Favorite Totem 130 Series" data-variant="1,98 м · 20–80 г" data-price-value="5360" data-image="assets/rod.png">Додати</a></div>
           </article>
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" decoding="async" alt="Котушка Select Ritmix 4000"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 4000</a></h3>
-            <p>6+1 підшипників · 4000 · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>1 150 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-4000" data-sku="RITMIX-4000" data-name="Котушка Select Ritmix 4000" data-variant="4000" data-price-value="1150" data-image="assets/viewed-reel.png">Додати</a></div>
+          <article class="product-card surface" data-product-card data-name="Воблер Hengjia HS009" data-category="Приманки Воблери Спінінгова ловля" data-price="130">
+            <a class="product-card-image" href="product-lure.html"><img src="assets/hengjia-hs009.png" width="1774" height="887" decoding="async" alt="Воблер Hengjia HS009"></a>
+            <span class="product-card-category">Воблери</span>
+            <h3><a href="product-lure.html">Воблер Hengjia HS009</a></h3>
+            <p>12,5 см · 20 г · багатосекційний тонучий swimbait для щуки</p>
+            <div class="card-bottom"><strong>130 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="hengjia-hs009" data-sku="4102009609" data-name="Воблер Hengjia HS009" data-variant="12,5 см · 20 г · колір 02" data-price-value="130" data-image="assets/hengjia-hs009.png">Додати</a></div>
           </article>
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" decoding="async" alt="Котушка Select Ritmix 5000"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 5000</a></h3>
-            <p>6+1 підшипників · 5000 · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>1 350 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-5000" data-sku="RITMIX-5000" data-name="Котушка Select Ritmix 5000" data-variant="5000" data-price-value="1350" data-image="assets/viewed-reel.png">Додати</a></div>
+          <article class="product-card surface" data-product-card data-name="Підсак Favorite BLN160 човновий" data-category="Аксесуари Підсаки" data-price="1420">
+            <a class="product-card-image" href="product-net.html"><img src="assets/favorite-bln160-net.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Підсак Favorite BLN160"></a>
+            <span class="product-card-category">Підсаки</span>
+            <h3><a href="product-net.html">Підсак Favorite BLN160</a></h3>
+            <p>Рама 80×70 см · довжина 240 см · човнова модель для великої риби</p>
+            <div class="card-bottom"><strong>1 420 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="favorite-bln160" data-sku="9020100008" data-name="Підсак Favorite BLN160 човновий" data-variant="80×70 см · 240 см" data-price-value="1420" data-image="assets/favorite-bln160-net.png">Додати</a></div>
           </article>
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" loading="lazy" decoding="async" alt="Котушка Select Ritmix 6000"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 6000</a></h3>
-            <p>6+1 підшипників · 6000 · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>1 550 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-6000" data-sku="RITMIX-6000" data-name="Котушка Select Ritmix 6000" data-variant="6000" data-price-value="1550" data-image="assets/viewed-reel.png">Додати</a></div>
-          </article>
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" loading="lazy" decoding="async" alt="Котушка Select Ritmix 7000"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 7000</a></h3>
-            <p>6+1 підшипників · 7000 · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>1 750 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-7000" data-sku="RITMIX-7000" data-name="Котушка Select Ritmix 7000" data-variant="7000" data-price-value="1750" data-image="assets/viewed-reel.png">Додати</a></div>
-          </article>
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" loading="lazy" decoding="async" alt="Котушка Select Ritmix 8000"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 8000</a></h3>
-            <p>6+1 підшипників · 8000 · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>2 050 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-8000" data-sku="RITMIX-8000" data-name="Котушка Select Ritmix 8000" data-variant="8000" data-price-value="2050" data-image="assets/viewed-reel.png">Додати</a></div>
-          </article>
-          <article class="product-card surface">
-            <a href="product.html"><img src="assets/viewed-reel.png" width="143" height="138" loading="lazy" decoding="async" alt="Котушка Select Ritmix 10000"></a>
-            <h3><a href="product.html">Котушка Select Ritmix 10000</a></h3>
-            <p>6+1 підшипників · 10000 · для риболовлі на річці та озері</p>
-            <div class="card-bottom"><strong>2 250 грн</strong><a href="cart.html" class="btn" data-add-to-cart data-product-id="ritmix-10000" data-sku="RITMIX-10000" data-name="Котушка Select Ritmix 10000" data-variant="10000" data-price-value="2250" data-image="assets/viewed-reel.png">Додати</a></div>
-          </article>
+          <p class="catalog-empty" hidden data-catalog-empty>За обраними фільтрами товарів не знайдено.</p>
         </div>
       </div>
     </main>
